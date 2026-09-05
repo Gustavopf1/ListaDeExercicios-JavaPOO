@@ -25,3 +25,23 @@ double numero = sc.nextDouble();
 System.out.printf("O número informado foi: %.2f", numero);
 ```
 Aqui eu estou escolhendo quantas casas decimais eu quero que sejam exibidas utilizando o `%.2f`.
+
+## Questão 06
+
+O primeiro erro de sintaxe que tem no código é que está faltando um `[]` depois do `String`, o outro erro é que está faltando um ponto e vírgula no final do `System.out.println("Contador: " + contador)`. E o último erro é o `while` que está entrado em um loop infinito, pois o `contador`  não acrescenta nada ao seu valor a cada repetição, Por isso, é necessário usar contador++; para aumentar o valor a cada loop e fazer com que o `while` pare quando a condição deixar de ser verdadeira.
+O codigo correto seria:
+```java
+import java.util.Scanner;
+
+public class Contador {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int contador = 0;
+        while (contador <= 5) {
+            System.out.println("Contador: " + contador);
+            contador++;
+        }
+    }
+}
+
+```
